@@ -1,0 +1,119 @@
+.menubar-block {
+  justify-content: space-between;
+  background-color: white;
+  /* position: fixed; */
+  width: 100%;
+}
+.menu {
+  color: #464d6c;
+}
+.menubar-block-mobile {
+  justify-content: space-between;
+  background-color: white;
+  /* position: fixed; */
+  width: 100%;
+}
+.logo-img {
+  max-width: 136.5px;
+}
+.login-block {
+  max-height: 44px;
+  /* margin-left: 100%; */
+}
+.join-block {
+  background-color: #6a59ff;
+  border-radius: 3px;
+  color: white;
+  font-family: Work Sans, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  /* height: 100%; */
+  max-width: 115px;
+  max-height: 44px;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    background-color 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+a {
+  text-decoration: none;
+}
+.menus {
+  width: 25px;
+  opacity: 0.5;
+}
+.join-btn {
+  width: 144px;
+  height: 44px;
+}
+.join-btn:hover {
+  box-shadow: 0px 2px 8px #6a59ff;
+  border-radius: 3px;
+  border: 0.5px solid #6a59ff;
+}
+
+.menu-show {
+  height: 411px;
+  overflow: hidden;
+}
+.list-menu {
+  bottom: 100%;
+  background-color: #2e2f31;
+  color: #6a59ff;
+  height: 100%;
+  position: relative;
+  transition: all 1s ease-out;
+}
+.fade-in{
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.fade-out{
+    animation: fadeOut 1s;
+}
+@keyframes fadeOut{
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.menu-show.active > .list-menu {
+  bottom: 0;
+}
+.menu-hover:hover {
+  background-color: #454a60;
+  color: #c1baff;
+}
+
+@media screen and (max-width: 870px) {
+  .menubar-block {
+    display: none;
+  }
+
+  .menubar-block-mobile {
+    display: flex;
+    margin-top: 23.5px;
+  }
+  .set-block {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+
+}
+
+@media screen and (min-width: 870px) {
+  .menubar-block {
+    display: flex;
+  }
+
+  .menubar-block-mobile {
+    display: none;
+  }
+
+  .menu-show {
+    display: none;
+   }
+}

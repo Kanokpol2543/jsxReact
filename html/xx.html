@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: 0
+        }
+
+        .box {
+            height: 200px;
+            width: 300px;
+            overflow: hidden;
+            border: 1px solid red;
+            background: #ff0;
+        }
+
+        .hid-box {
+            bottom: 100%;
+            position: relative;
+            transition: all .3s ease-out;
+            background: #428bca;
+            height: 100%;
+        }
+
+        .box.active>.hid-box {
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box">
+        <div class="hid-box">
+            <h1>CSS3 slide up</h1>
+            <p>This is a quick demo of slide-up effect using CSS animation when clicking the box. No JS required!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('box').addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
