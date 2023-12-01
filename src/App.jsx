@@ -3,6 +3,7 @@ import { useState } from "react";
 
 // import "./assets/css/style.css";
 import MenuBar from "./components/MenuBar";
+import Welcome from "./components/Welcome";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,9 +12,11 @@ function App() {
     <>
       <div className="main-block">
         <div className="menu-bar pos-fix">
-          <MenuBar />
+          <MenuBar/>
         </div>
-        <div className="block"></div>
+        <div className="intro">
+          <Welcome/>
+        </div>
       </div>
     </>
   );

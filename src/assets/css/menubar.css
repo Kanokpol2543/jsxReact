@@ -37,6 +37,11 @@
 a {
   text-decoration: none;
 }
+.basket{
+  margin-top: -5px;
+  height: 44px;
+  opacity: 0.5;
+}
 .menus {
   width: 25px;
   opacity: 0.5;
@@ -52,8 +57,13 @@ a {
 }
 
 .menu-show {
-  height: 411px;
+  top: 76px;
+  position: absolute;
+  height: 332px;
   overflow: hidden;
+  width: 100%;
+  transition: top 1s cubic-bezier(0.17, 0.04, 0.03, 0.94);
+  box-sizing: border-box;
 }
 .list-menu {
   bottom: 100%;
@@ -63,20 +73,28 @@ a {
   position: relative;
   transition: all 1s ease-out;
 }
-.fade-in{
-    animation: fadeIn 1s;
+.fade-in {
+  animation: slide 1s;
 }
-@keyframes fadeIn{
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.fade-out{
-    animation: fadeOut 1s;
+.fade-out {
+  animation: fadeOut 1s;
 }
-@keyframes fadeOut{
-    0% { opacity: 1; }
-    100% { opacity: 0; }
+@keyframes fadeOut {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .menu-show.active > .list-menu {
@@ -100,8 +118,9 @@ a {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-
-
+  .logo-img{
+    width: 90px;
+  }
 }
 
 @media screen and (min-width: 870px) {
@@ -115,5 +134,5 @@ a {
 
   .menu-show {
     display: none;
-   }
+  }
 }

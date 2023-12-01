@@ -3,8 +3,9 @@ import { useState } from "react";
 import "../assets/css/style.css";
 import "../assets/css/menubar.css";
 
-import logoImage from "../assets/img/UISOURCES.png";
+import logoImage from "../assets/img/JW.png";
 import menu from "../assets/img/menus.png";
+import basket from "../assets/img/shopping-bag.png"
 
 function MenuBar() {
   const [isActive, setIsActive] = useState(false);
@@ -19,20 +20,22 @@ function MenuBar() {
               </a>
             </div>
             <div className="menu d-flex al-jt-ceter">
-              <p className="mr-1 cursor t-hover">Home</p>
-              <p className="mr-1 cursor t-hover">Apps</p>
-              <p className="mr-1 cursor t-hover">Screenshots</p>
-              <p className="mr-1 cursor t-hover">Inte</p>
+              <p className="mr-1 cursor text-hover">Home</p>
+              <p className="mr-1 cursor text-hover">Shop</p>
+              <p className="mr-1 cursor text-hover">Promotion</p>
             </div>
           </div>
 
           <div className="login-block w-nav-r d-flex al-jt-ceter">
             <div className="menu d-flex al-jt-ceter">
-              <p className="ml-2 cursor t-hover">Pricing</p>
-              <p className="ml-2 cursor t-hover">Login</p>
+              <div className="d-flex al-jt-ceter cursor ">
+                <img className="basket" src={basket} alt="" />
+                <p className="text-hover">Basket</p>
+              </div>
+              <p className="ml-2  text-hover">Login</p>
             </div>
             <div className="join-block d-flex al-jt-ceter cursor ml-2 button-hover">
-              <div className="join-btn d-flex al-jt-ceter">Join now</div>
+              <div className="join-btn d-flex al-jt-ceter">Join Member</div>
             </div>
           </div>
         </div>
@@ -53,21 +56,18 @@ function MenuBar() {
         </div>
       </div>
       {/* <div className="list-menu"> */}
-      <div className={`menu-show ${isActive ? "active fade-in" : "fade-out"}`}>
+      <div className={`menu-show ${isActive ? "active fade-in" : ""}`}>
         <div className="list-menu">
-          <div className="pl-3 pr-3 pt-2 pb-2 cursor menu-hover">
-            <p href="">App</p>
+          <div className="pl-3 pr-3 pt-1 pb-1 cursor menu-hover">
+            <p href="">Shop</p>
           </div>
-          <div className="pl-3 pr-3 pt-2 pb-2 cursor menu-hover">
-            <p href="">Interaction</p>
+          <div className="pl-3 pr-3 pt-1 pb-1 cursor menu-hover">
+            <p href="">Basket</p>
           </div>
-          <div className="pl-3 pr-3 pt-2 pb-2 cursor menu-hover">
-            <p href="">Screenshots</p>
+          <div className="pl-3 pr-3 pt-1 pb-1 cursor menu-hover">
+            <p href="">Promotion</p>
           </div>
-          <div className="pl-3 pr-3 pt-2 pb-2 cursor menu-hover">
-            <p href="">Pricing</p>
-          </div>
-          <div className="pl-3 pr-3 pt-2 pb-2 cursor menu-hover">
+          <div className="pl-3 pr-3 pt-1 pb-1 cursor menu-hover">
             <p href="">Login</p>
           </div>
         </div>
